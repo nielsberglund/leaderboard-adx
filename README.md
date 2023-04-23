@@ -8,7 +8,7 @@ This repo is still the backing repo, and this file still points to the [post][1]
 
 In case someone doesn't know what Kafka is: Apache Kafka is a distributed streaming platform. It is designed to handle large volumes of real-time data streams and enable real-time data processing and analysis. Kafka is built on top of the publish-subscribe messaging model, where producers publish messages to topics, and consumers subscribe to those topics to receive and process the messages. It uses a distributed architecture that allows it to scale horizontally across multiple servers and handle large amounts of data:
 
-![Kafka](/leaderboard-kql/assets/images/kafka-pub-sub.png)
+![Kafka](/leaderboard-adx/assets/images/kafka-pub-sub.png)
 
 
 ## Azure Data Explorer
