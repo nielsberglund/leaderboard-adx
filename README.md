@@ -10,6 +10,33 @@ In case someone doesn't know what Kafka is: Apache Kafka is a distributed stream
 
 ![Kafka](/assets/images/kafka-pub-sub.png)
 
+**Figure 1:** *Kafka*
+
+You see in *Figure 1* what is mentioned above: in the middle you have a Kafka cluster (in this case three nodes), where the topics are distributed over the nodes. At the left you have multiple publishers, publishing events to topics in the Kafka cluster. On the right you have consumers, consuming these events from topics.
+
+The consumers processes the events, and it may so be that the consumers write the events to other systems.
+
+### Kafka Connect
+
+Above I mentioned that consumers may write the events to other systems. Instead of having consumers writing explicit code for writing events to other systems, you can use Kafka Connect.
+
+Kafka Connect is a framework that enables the integration of external systems with Apache Kafka. It provides a scalable and fault-tolerant way to stream data between Kafka topics and other data sources or sinks.
+
+Kafka Connect consists of two main components:
+
+* Connectors: A connector is a plugin that connects to an external system and defines the configuration and operations required to read from or write to that system. Connectors can be developed and installed independently of Kafka Connect.
+
+* Connect worker: A connect worker is a Java process that manages the execution of connectors, including scaling, failover, and parallel processing of data. The connect worker runs on a separate machine or cluster from Kafka brokers and coordinates the data flow between connectors and Kafka.
+
+Kafka Connect supports a wide range of connectors, including database connectors, file connectors, messaging system connectors, and cloud service connectors. By leveraging connectors, data can be easily and efficiently ingested into Kafka from a variety of sources or pushed from Kafka to other data stores or systems:
+
+![Kafka Connect](/assets/images/kafka-connect.png)
+
+**Figure 2:** *Kafka Connect*
+
+
+
+
 
 ## Azure Data Explorer
 
